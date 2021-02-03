@@ -3,7 +3,7 @@
 Group Members: 
 * David Purvis
 * Daniel Tanner
-* Justin Burt 
+* Justin Burt   - jab1821@msstate.edu
 * Rakeen Zaman
 
 Project Description:
