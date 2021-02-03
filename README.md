@@ -12,4 +12,4 @@ Project Description:
 Coding languges to be used:
 * front-end: html/css
 * back-end: sqlite
-** rest of the languages TBD **
+*rest of the languages TBD 
