@@ -2,7 +2,7 @@
 
 Group Members: 
 * David Purvis - dgp104@msstate.edu
-* Daniel Tanner
+* Daniel Tanner - dkt91@msstate.edu
 * Justin Burt   - jab1821@msstate.edu
 * Rakeen Zaman
 
