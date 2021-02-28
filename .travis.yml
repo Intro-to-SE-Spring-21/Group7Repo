@@ -2,3 +2,7 @@ language: php
 php:
   - 7.3
 
+test:
+  adapter: sqlite3
+  database: ":memory:"
+  timeout: 500
