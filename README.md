@@ -11,5 +11,5 @@ Project Description:
 
 Coding languges to be used:
 * front-end: html/css/javascript
-* back-end: sqlite
-* rest of the languages PHP
+* back-end: php and sqlite
+
