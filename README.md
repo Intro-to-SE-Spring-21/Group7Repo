@@ -13,5 +13,5 @@ Coding languges to be used:
 * front-end: html/css/javascript
 * back-end: php and sqlite
 
-[![Build Status](https://travis-ci.com/github/Intro-to-SE-Spring-21/Group7Repo.svg?branch=main)](https://travis-ci.org/intro-to-SE-Spring-21/Group7Repo)
+[![Build Status](https://travis-ci.com/Intro-to-SE-Spring-21/Group7Repo.svg?branch=main)](https://travis-ci.org/intro-to-SE-Spring-21/Group7Repo)
 
