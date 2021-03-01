@@ -1,5 +1,7 @@
 # Group7Repo
 
+[![Build Status](https://travis-ci.com/Intro-to-SE-Spring-21/Group7Repo.svg?branch=main)](https://travis-ci.org/intro-to-SE-Spring-21/Group7Repo)
+
 Group Members: 
 * David Purvis - dgp104@msstate.edu
 * Daniel Tanner - dkt91@msstate.edu
@@ -13,5 +15,4 @@ Coding languges to be used:
 * front-end: html/css/javascript
 * back-end: php and sqlite
 
-[![Build Status](https://travis-ci.com/Intro-to-SE-Spring-21/Group7Repo.svg?branch=main)](https://travis-ci.org/intro-to-SE-Spring-21/Group7Repo)
 
