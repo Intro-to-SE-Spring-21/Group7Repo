@@ -1,5 +1,6 @@
 
 <!-- reference for this code: https://www.youtube.com/watch?v=15hVqug7bjM&list=PLBOh8f9FoHHhRk0Fyus5MMeBsQ_qwlAzG&index=4  -->
+<!-- This is a change, Group 7 -->
 
 <?php session_start();
 
