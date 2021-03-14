@@ -1,6 +1,20 @@
 
 <!-- reference for this code: https://www.youtube.com/watch?v=NLsbLB2Qgvg&list=PLBOh8f9FoHHhRk0Fyus5MMeBsQ_qwlAzG&index=2 -->
 
+<!-- sqlite3 command prompt commands:
+CREATE TABLE users (id INTEGER PRIMARY KEY, username VARCHAR, password VARCHAR, email TEXT);
+
+CREATE TABLE followers (user VARCHAR NOT NULL, follower VARCHAR NOT NULL);
+
+CREATE TABLE posts (postid INTEGER PRIMARY KEY NOT NULL, user VARCHAR NOT NULL, body VARCHAR NOT NULL, time DATETIME NOT NULL, likes INTEGER NOT NULL, FOREIGN KEY(user) REFERENCES users(username));
+
+CREATE TABLE postlikes (postid INTEGER NOT NULL, user VARCHAR NOT NULL,
+FOREIGN KEY(postid) REFERENCES posts(postid), FOREIGN KEY(user) REFERENCES users(username));
+
+-->
+
+
+<!-- these functions are just setting up the database stuff -->
 
 <?php
 function connect() {
@@ -21,6 +35,9 @@ function query($query, $parameter = array()){
 
 $pdo = new PDO('sqlite:mydb.db');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+//saving variables from the form, and inserting into database if the criteria for username/password is met
 
 if (isset($_POST['create'])) {
   $username = $_POST['username'];
@@ -57,6 +74,8 @@ if (isset($_POST['create'])) {
   }
 }
 ?>
+
+<!-- this is the form for creating an account -->
 
 <h2>Register for an account</h2>
 <form class="create-account.php" method="post">
