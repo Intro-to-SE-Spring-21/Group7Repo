@@ -1,20 +1,11 @@
 
-<!-- reference for this code: https://www.youtube.com/watch?v=NLsbLB2Qgvg&list=PLBOh8f9FoHHhRk0Fyus5MMeBsQ_qwlAzG&index=2 -->
-
-<!-- sqlite3 command prompt commands:
-CREATE TABLE users (id INTEGER PRIMARY KEY, username VARCHAR, password VARCHAR, email TEXT);
-
-CREATE TABLE followers (user VARCHAR NOT NULL, follower VARCHAR NOT NULL);
-
-CREATE TABLE posts (postid INTEGER PRIMARY KEY NOT NULL, user VARCHAR NOT NULL, body VARCHAR NOT NULL, time DATETIME NOT NULL, likes INTEGER NOT NULL, FOREIGN KEY(user) REFERENCES users(username));
-
-CREATE TABLE postlikes (postid INTEGER NOT NULL, user VARCHAR NOT NULL,
-FOREIGN KEY(postid) REFERENCES posts(postid), FOREIGN KEY(user) REFERENCES users(username));
-
--->
-
-
 <!-- these functions are just setting up the database stuff -->
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
 <?php
 function connect() {
@@ -35,6 +26,12 @@ function query($query, $parameter = array()){
 
 $pdo = new PDO('sqlite:mydb.db');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//header
+
+echo "<div class='header'>";
+echo    "<div class='title'><img src='twitter.png' alt='Twitter' style='width:80px;height:80px;'></div>";
+echo "</div>";
 
 
 //saving variables from the form, and inserting into database if the criteria for username/password is met
@@ -76,12 +73,17 @@ if (isset($_POST['create'])) {
 ?>
 
 <!-- this is the form for creating an account -->
-
+<div class="loginpage">
 <h2>Register for an account</h2>
+<br />
 <form class="create-account.php" method="post">
   <input type="text" name="username" value="" placeholder="type username...">
   <input type="password" name="password" value="" placeholder="type password...">
   <input type="email" name="email" value="" placeholder="type email...">
   <input type="submit" name="create" value="Create Account">
 </form>
-<a href="login.php">Login</a>
+<br></br>
+<a href="login.php">Already have an account? Click here to login</a>
+</div>
+</body>
+</html>
