@@ -75,7 +75,7 @@ echo "</div>";
 
    if (strlen($tweet) < 150 && strlen($tweet) >= 1)
    {
-     query('INSERT INTO posts VALUES (null, :user, :post, datetime(), 0)', array(':user'=>$profileuser, ':post'=>$tweet));
+     query('INSERT INTO posts VALUES (null, :user, :post, datetime(), 0, 0, null)', array(':user'=>$profileuser, ':post'=>$tweet));
    }
    else {
      echo "post too small or too big";
