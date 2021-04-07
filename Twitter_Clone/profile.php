@@ -515,7 +515,6 @@ if (isset($_GET['username']))
 function dark() {
   var element = document.body;
   element.classList.toggle("darkmode");
-
 }
 </script>
 </div>
