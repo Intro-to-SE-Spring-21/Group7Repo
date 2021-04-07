@@ -27,6 +27,7 @@ function query($query, $parameter = array()){
 echo "<div class='header'>";
 echo    "<div class='title'><img src='twitter.png' alt='Twitter' style='width:80px;height:80px;'></div>";
 echo "</div>";
+echo "<div class='header2'></div>";
 
 //if you are logged in, this takes you straight to the home page
 
@@ -47,11 +48,11 @@ if (isset($_POST['login'])) {
         }
       }
       else{
-        echo "<div class='errorflag'>Incorrect Password!</div>";
+        $error = '<div id="errorflag">Incorrect Password!</div>';
       }
     }
     else {
-      echo "<div class='errorflag'>User not found!</div>";
+      $error = '<div id="errorflag">User not found!</div>';
     }
 
 }
@@ -60,16 +61,21 @@ if (isset($_POST['login'])) {
 
 <!-- form for logging in -->
 <div class="loginpage">
-<h2>Login to your account</h2>
-<br />
+<h2>Twitter</h2>
 <form action="login.php" method="post">
-<input type="text" name="username" value="" placeholder="type username...">
-<input type="password" name="password" value="" placeholder="type password...">
-<input type="submit" name="login" value="Login">
+<?php if(isset($error)){ echo $error; } ?>
+<div class="text"><input type="text" name="username" value="" placeholder="Username"></div>
+<div class="text"><input type="password" name="password" value="" placeholder="Password"></div>
+<div class="text"><input type="submit" name="login" value="Login"></div>
 </form>
-<br></br><a href="createaccount.php">Don't have an account? Click here to create one</a>
+<a href="createaccount.php"><br>Create an Account</a>
 </div>
-
-
 </body>
+<style>
+  #errorflag{
+    color: red;
+    font-family: Montserrat;
+    margin: -.5em 0em 0em;
+  }
+</style>
 </html>
