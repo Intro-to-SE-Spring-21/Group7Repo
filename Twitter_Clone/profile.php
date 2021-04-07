@@ -340,7 +340,7 @@ if (isset($_GET['username']))
     }
   }
 
-//this is what makes the posts show up, basically the same as the code in home.php 
+//this is what makes the posts show up, basically the same as the code in home.php
   $sentposts = query('SELECT * FROM posts WHERE user=:user ORDER BY time DESC', array(':user'=>$user));
   $post = "";
   foreach($sentposts as $t){
