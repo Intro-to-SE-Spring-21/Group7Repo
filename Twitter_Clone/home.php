@@ -164,11 +164,6 @@
     font-weight: bold;
     color: #1DA1F2;
   }
-  #errorflag{
-    color: red;
-    font-family: Montserrat;
-    margin: 2em 0em -1em;
-  }
 </style>
 </head>
 <body>
@@ -216,7 +211,7 @@ echo "</ul></div></div>";
      }
    }
    else {
-    $error = '<div id="errorflag">User not found!</div>';
+    $error2 = '<div id="errorflag">Username Invalid!</div>';
    }
  }
 
@@ -230,7 +225,7 @@ echo "</ul></div></div>";
      query('INSERT INTO posts VALUES (null, :user, :post, datetime(), 0, 0, null)', array(':user'=>$profileuser, ':post'=>$tweet));
    }
    else {
-    $error2 = '<div id="errorflag">Incorrect Post Size!</div>';
+     $error1 = '<div id="errorflag">Incorrect Post Size!</div>';
    }
  }
 
@@ -398,14 +393,14 @@ foreach($posts as $t){
   <div class="header3">Twitter</div>
   <form action='home.php' method='post'>
     <div class="search">
-    <?php if(isset($error)){ echo $error; } ?>
+    <?php if(isset($error2)){ echo $error2; } ?>
       <div class="text"><input type='text' name='username'></div>
       <input type='submit' name='search' value='Search for User'>
     </div> 
   </form>
   <div class="post">
     <form action="home.php" method="post">
-    <?php if(isset($error2)){ echo $error2; } ?>
+    <?php if(isset($error1)){ echo $error1; } ?>
       <div class="text"><textarea name='post' rows='10' cols='33'></textarea></div>
       <input type='submit' name='tweet' value='Post a tweet'>
     </form>
@@ -426,4 +421,11 @@ function dark() {
 </div>
 </div>
 </body>
+<style>
+  #errorflag{
+    color: red;
+    font-family: Montserrat;
+    margin: 1em 0em 0em;
+  }
+</style>
 </html>
