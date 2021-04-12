@@ -45,11 +45,10 @@
     background-color: #F5F8FA;
     margin: 0em 0em 0em 0em;
   }
-  .static{
-    width: 42%;
+    .static{
+    width: 35%;
     text-align: center;
     display: inline-block;
-    background-color: #F5F8FA;
     position: fixed;
   }
   .darkmode .taskbar{
