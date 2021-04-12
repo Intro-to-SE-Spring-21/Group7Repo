@@ -93,7 +93,7 @@
     width: 35%;
     margin: 0em 0em 0em 6em;
     display: inline-block;
-    background-color: #F5F8FA;
+    
     position: fixed;
   }
   .webpage{
