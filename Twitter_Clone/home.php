@@ -45,15 +45,16 @@
     background-color: #F5F8FA;
     margin: 0em 0em 0em 0em;
   }
-    .static{
+  .static{
     width: 35%;
     text-align: center;
     display: inline-block;
     position: fixed;
   }
   .darkmode .taskbar{
-    background-color: #657786
-;
+    background-color: #1c1c1c;
+
+
   }
   .taskbar{
     background-color: #E1E8ED;
@@ -80,7 +81,7 @@
   border-radius: .75em;
   }
   .darkmode input[type=submit]{
-    color: #AAB8C2;
+    color: white;
   }
   input[type=submit]:hover{
   color:#1DA1F2;
@@ -97,8 +98,8 @@
   border-radius: .75em;
   }
   .darkmode .posts input[type=submit]{
-    background-color: #AAB8C2;
-    color: #657786;
+    background-color: white;
+    color: #1DA1F2;
   }
   .posts input[type=submit]:hover{
   color:#E1E8ED;
@@ -124,7 +125,7 @@
   }
   .darkmode .username, .darkmode .tweetbody, .darkmode .footer, .darkmode .retweets{
     font-family: Montserrat;
-    color: #AAB8C2;
+    color: white;
     text-decoration: none;
   }
   .username{
@@ -155,7 +156,7 @@
     color: white;
   }
   .darkmode a{
-    color: #AAB8C2;
+    color: white;
   }
   .header3{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif; ;
@@ -395,7 +396,7 @@ foreach($posts as $t){
     <?php if(isset($error2)){ echo $error2; } ?>
       <div class="text"><input type='text' name='username'></div>
       <input type='submit' name='search' value='Search for User'>
-    </div> 
+    </div>
   </form>
   <div class="post">
     <form action="home.php" method="post">
