@@ -1,4 +1,3 @@
-
 <!-- reference for this code: https://www.youtube.com/watch?v=15hVqug7bjM&list=PLBOh8f9FoHHhRk0Fyus5MMeBsQ_qwlAzG&index=10 -->
 
 <!DOCTYPE html>
@@ -24,7 +23,7 @@
   .yourpage{
     margin: 0em 6em 1.5em 0em;
   }
-  .darkmode .webpage, .darkmode .webpage2, .darkmode .wheader, .darkmode .header, .darkmode .header2, .darkmode .static, .darkmode .posts, .darkmode .yourpage, .darkmode li, .darkmode ul{
+  .darkmode .webpage, .darkmode .webpage2, .darkmode .wheader, .darkmode .header, .darkmode .header2, .darkmode .posts, .darkmode .yourpage, .darkmode li, .darkmode ul{
     background-color: black;
   }
   a{
@@ -93,7 +92,7 @@
     width: 35%;
     margin: 0em 0em 0em 6em;
     display: inline-block;
-    
+
     position: fixed;
   }
   .webpage{
@@ -139,15 +138,15 @@
     border: black;
   }
   .darkmode input[type=submit]{
-    color: #AAB8C2;
+    color: white;
   }
   .darkmode input[type=submit]:hover{
     color: #657786;
     background-color: #AAB8C2;
   }
   .darkmode .posts input[type=submit]{
-    color: #AAB8C2;
-    background-color: #657786;
+    color: #1DA1F2;
+    background-color: white;
   }
   .darkmode .posts input[type=submit]:hover{
     color: #657786;
@@ -157,9 +156,12 @@
     background-color: #AAB8C2;
     border: black;
   }
+  .darkmode a{
+    color: white;
+  }
   .darkmode .tweetbody, .darkmode .footer, .darkmode .retweets{
     font-family: Montserrat;
-    color: #AAB8C2;
+    color:white;
     text-decoration: none;
   }
   #errorflag{
@@ -340,7 +342,7 @@ if (isset($_GET['username']))
     }
   }
 
-//this is what makes the posts show up, basically the same as the code in home.php 
+//this is what makes the posts show up, basically the same as the code in home.php
   $sentposts = query('SELECT * FROM posts WHERE user=:user ORDER BY time DESC', array(':user'=>$user));
   $post = "";
   foreach($sentposts as $t){
@@ -370,7 +372,6 @@ if (isset($_GET['username']))
         <form action='profile.php?username=$user&postid=".$t['postid']."' method='post'>
           <input type='submit' name='delete' value='Delete'>
         </form>
-
         </div></div>";
       }
     }
@@ -515,6 +516,7 @@ if (isset($_GET['username']))
 function dark() {
   var element = document.body;
   element.classList.toggle("darkmode");
+
 }
 </script>
 </div>
